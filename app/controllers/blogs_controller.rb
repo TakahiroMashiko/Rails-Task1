@@ -1,6 +1,7 @@
 class BlogsController < ApplicationController
   def index
     @blogs = Blog.all
+    p @blogs
   end
 
   def show
@@ -38,7 +39,6 @@ class BlogsController < ApplicationController
 # ストロングパラメータ
   private
   def blog_params
-    # 意図的にpermitの「category」を「categoly」へ変更
-    params.require(:blog).permit(:title, :categorly, :body)
+    params.require(:blog).permit(:title, :category, :body)
   end
 end
