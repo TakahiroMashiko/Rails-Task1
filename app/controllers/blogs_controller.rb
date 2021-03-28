@@ -39,6 +39,6 @@ class BlogsController < ApplicationController
   private
   def blog_params
     # 意図的にpermitの「category」を「categoly」へ変更
-    params.require(:blog).permit(:title, :categoly, :body)
+    params.require(:blog).permit(:title, :categorly, :body)
   end
 end
