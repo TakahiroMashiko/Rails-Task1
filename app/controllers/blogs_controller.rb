@@ -38,6 +38,7 @@ class BlogsController < ApplicationController
 # ストロングパラメータ
   private
   def blog_params
-    params.require(:blog).permit(:title, :category, :body)
+    # 意図的にpermitの「category」を「categoly」へ変更
+    params.require(:blog).permit(:title, :categoly, :body)
   end
 end
