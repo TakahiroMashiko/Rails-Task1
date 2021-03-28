@@ -16,6 +16,9 @@ class BlogsController < ApplicationController
 
   def create
     blog = Blog.new(blog_params)
+    # binding.pryを追加
+    binding.pry
+
     blog.save
     # 以下の行を修正
     redirect_to blog_path(blog.id)
